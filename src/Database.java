@@ -10,9 +10,7 @@ import java.util.List;
 
 
 public class Database {
-	static String defaultFilenameWindows = "phonebookDatabase.txt";
-	static String defaultFilenameNonWindows = ".phonebookDatabase";
-	static boolean windowsOs;
+	static String defaultFilename = "phonebookDatabase.txt";
 	
     //	- List all entries in the phone book.
 	public static void listAll() throws IOException{
@@ -167,16 +165,12 @@ public class Database {
 		pw.close();
 	}
 	
-	//get filepath dependant on os. //
+	//get filepath
     public static Path getFilePath()
     {
-        String osName = System.getProperty("os.name");
         String homeDir   = System.getProperty("user.home");
-        windowsOs = osName.startsWith("Windows");
 
-        String fileName = windowsOs
-                ? defaultFilenameWindows
-                : defaultFilenameNonWindows;
+        String fileName = defaultFilename;
 
         return Paths.get(homeDir, fileName);
     }
