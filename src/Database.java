@@ -1,5 +1,4 @@
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.Charset;
@@ -7,7 +6,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 
@@ -96,29 +94,25 @@ public class Database {
 	
 	//printing out entries to console with addition of entry numbers if Listing
 	public static void printEntries(boolean listAllValues,ArrayList<Entries> entriesArraylist){
-		String formatString;
 		if (!entriesArraylist.isEmpty()){
 			if (listAllValues){
-				formatString = "%6s%10s%10s%12s%40s";
-				System.out.println("Listing all results:<br>");
-				System.out.format(formatString,"Entry","Firstname","Surname","Number","&emsp;&emsp;Address");
-				System.out.println("<br>");
+				System.out.println("Listing all results:<br><br>");
 				int entryNumber = 0;
 				for (Entries Entry : entriesArraylist){
-					System.out.format(formatString, "&emsp;&ensp;&nbsp;" + entryNumber," " + Entry.getFirstname()," " + Entry.getSurname(), 
-					" " + Entry.getNumber()," " + Entry.getAdress());
-					System.out.println("<br>");
+					System.out.println("Entry Number: " + entryNumber + "<br>");
+					System.out.println("Firstname: " + Entry.getFirstname() + "<br>");
+					System.out.println("Surname: " + Entry.getSurname() + "<br>");
+					System.out.println("Phone Number: " + Entry.getNumber() + "<br>");
+					System.out.println("Address: " + Entry.getAdress() + "<br><br>");
 					entryNumber++;
 				}
 			} else{
-				formatString = "%10s%10s%12s%40s";
-				System.out.println("Listing search results:<br>");
-				System.out.format(formatString,"Firstname","Surname","Number","&emsp;&emsp;Address");
-				System.out.println("<br>");
+				System.out.println("Listing search results:<br><br>");
 				for (Entries Entry : entriesArraylist){
-					System.out.format(formatString," " + Entry.getFirstname()," " + Entry.getSurname(), 
-					" " + Entry.getNumber()," " + Entry.getAdress());
-					System.out.println();
+					System.out.println("Firstname: " + Entry.getFirstname() + "<br>");
+					System.out.println("Surname: " + Entry.getSurname() + "<br>");
+					System.out.println("Phone Number: " + Entry.getNumber() + "<br>");
+					System.out.println("Address: " + Entry.getAdress() + "<br><br>");
 				}
 				
 			}
