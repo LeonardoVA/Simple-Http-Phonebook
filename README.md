@@ -2,9 +2,11 @@
 
 Installation instructions:
 
-Download the jar & the textfile place textfile in home directory. 
+Download the jar & the textfile then place textfile in home directory. 
 
-If that is unkonwn load up the jar in console and it should print out your home directory for you.
+If that is unknown when you run the jar in console it should print out your home directory for you.
+
+Run the jar if you haven't already.
 
 Navigate in a browser to localhost:6060/help for usage or proceed to use one of the following commands.
 
