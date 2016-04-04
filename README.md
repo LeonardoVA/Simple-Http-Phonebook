@@ -18,7 +18,7 @@ This will add a user to the database and sort it in alphabetical order.
 
 Localhost:6060/search/searchterm
 
-This will search the usernames for a match (partial or full) so searching "max" would return all entries with surnames which contain "max". 
+This will search the usernames for a match (partial or full) so searching "max" would return all entries with surnames which contain "max". NOTE! search is case sensitive.
 
 Localhost:6060/list
 
@@ -30,7 +30,11 @@ This will remove the entry from the database, you must find the entrynumber by l
 
 Localhost:6060/edit/entrynumber/firstname/surname/phonenumber/address(optional)
 
-This will change the entrynumber specified, to the new values entered in the url.
+This will change the entrynumber specified, to the new values entered in the url, it will also resort 
 
 After sufficient fun has been acchieved through usage you can stop the application by visiting: Localhost:6060/end
+
+Future work:
+
+Make search independant of case, include entry numbers in the search as well as when listing all entries.
 
