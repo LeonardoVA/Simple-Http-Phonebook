@@ -72,7 +72,7 @@ public class Main extends AbstractHandler {
 			
 		case "add" : 
 			if (size > 5 || size < 4){
-				print(response, "Max of 4 additional fields and minimum of 3 for add. "
+				print(response, "Max of 4 additional values and minimum of 3 following add. "
 						+ usage);
 											
 			} else {
@@ -96,7 +96,7 @@ public class Main extends AbstractHandler {
 			
 		case "list" :
 			if (!(size == 1)){
-				print(response, "0 additional fields required." + usage);
+				print(response, "0 additional values required after list." + usage);
 			} else{
 				ByteArrayOutputStream baos = new ByteArrayOutputStream();
 				System.setOut(new PrintStream(baos));
@@ -116,7 +116,7 @@ public class Main extends AbstractHandler {
 		
 		case "edit" :
 			if (size > 6 || size < 5){
-				print(response, "Max of 5 additional fields and minimum of 4 for edit. "
+				print(response, "Max of 5 additional values and minimum of 4 after edit. "
 						+ usage);
 											
 			} else {
@@ -145,7 +145,7 @@ public class Main extends AbstractHandler {
 		
 		case "remove" :
 			if (!(size == 2)){
-				print(response, "1 field required." + usage);
+				print(response, "1 value required after remove." + usage);
 			} else{
 				try{
 					int entryno = Integer.parseInt(args[1]);					
@@ -166,7 +166,7 @@ public class Main extends AbstractHandler {
 		
 		case "search" :
 			if (!(size == 2)){
-				print(response, "1 additional fields required." + usage);
+				print(response, "only 1 additional value required after search." + usage);
 			} else{
 				ByteArrayOutputStream baos = new ByteArrayOutputStream();
 				System.setOut(new PrintStream(baos));

@@ -67,8 +67,10 @@ public class Database {
 		entry.setNumber(number);
 		entry.setAddress(address);
 		entriesArrayList.remove(entryNumber);
-		entriesArrayList.add(entryNumber, entry);
-		//write entries to file.
+		//Add edited entry to the list @ index 0
+		entriesArrayList.add(0,entry);
+		//Sort the arraylist
+		sortEntriesBySurname(entriesArrayList);
 		writeToFile(entriesArrayList);
 	}
 	
