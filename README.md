@@ -12,7 +12,7 @@ Navigate in a browser to localhost:6060/help for usage or proceed to use one of 
 
 Usage:
 
-Localhost:6060/add/firstname/surname/number/address 
+Localhost:6060/add/firstname/surname/number/address(optional)
 
 This will add a user to the database and sort it in alphabetical order.
 
